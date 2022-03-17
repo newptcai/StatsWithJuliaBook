@@ -2,7 +2,7 @@
 
 This is a fork of the original repository [here](https://github.com/h-Klok/StatsWithJuliaBook) by
 H.Klok and Y.Nazarathy.
-It is meant to keep the code update to the latest version of Julia.
+It is meant to keep the code compatible with the latest version of Julia.
 
 ## Usage instructions:
 
