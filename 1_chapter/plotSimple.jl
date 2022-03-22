@@ -1,4 +1,4 @@
-using Plots, LaTeXStrings, Measures; pyplot()
+using Plots, LaTeXStrings, Measures; gr()
 
 f(x,y) = x^2 + y^2
 f0(x) = f(x,0)
