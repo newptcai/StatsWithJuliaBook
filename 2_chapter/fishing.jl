@@ -1,4 +1,4 @@
-using StatsBase, Plots ; pyplot()
+using StatsBase, Plots ; gr()
 
 function proportionFished(gF,sF,n,N,withReplacement = false)
     function fishing()

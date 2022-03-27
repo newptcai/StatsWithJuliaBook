@@ -1,4 +1,4 @@
-using StatsBase, Combinatorics, Plots ; pyplot()
+using StatsBase, Combinatorics, Plots ; gr()
 
 matchExists1(n) = 1 - prod([k/365 for k in 365:-1:365-n+1])
 matchExists2(n) = 1- factorial(365,365-big(n))/365^big(n)
