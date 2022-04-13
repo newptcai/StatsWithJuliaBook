@@ -1,5 +1,5 @@
 using DataFrames, CSV, Statistics
-data = CSV.read("../data/purchaseData.csv")
+data = CSV.read("./data/purchaseData.csv", DataFrame)
 
 rowsKeep = .!(ismissing.(data.Grade) .& ismissing.(data.Price))
 data = data[rowsKeep, :]
@@ -7,7 +7,7 @@ data = data[rowsKeep, :]
 replace!(x -> ismissing(x) ? "QQ" : x, data.Name)
 replace!(x -> ismissing(x) ? "31/06/2008" : x, data.Date)
 
-grPr = by(dropmissing(data), :Grade, :Price=>x -> 
+grPr = combine(dropmissing(data), :Grade, :Price=>x -> 
 	AvgPrice = round(mean(x), digits=-3))
 
 d = Dict(grPr[:,1] .=> grPr[:,2])

@@ -1,5 +1,5 @@
 using DataFrames, CSV
-data = CSV.read("../data/purchaseData.csv", copycols = true)
+data = CSV.read("data/purchaseData.csv", DataFrame, copycols = true)
 
 println(size(data),"\n")
 println(names(data),"\n")

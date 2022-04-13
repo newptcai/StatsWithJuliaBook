@@ -1,5 +1,5 @@
 using DataFrames, CSV
-data = CSV.read("../data/purchaseData.csv", copycols = true)
+data = CSV.read("data/purchaseData.csv", DataFrame)
 
 newCol = DataFrame(Validated=ones(Int, size(data,1)))
 newRow = DataFrame([["JOHN", "JACK"] [123456, 909595]], [:Name, :PhoneNo])
@@ -12,7 +12,7 @@ println(first(data, 3), "\n")
 data = vcat(data, newRow, cols=:union) 
 println(last(data, 3), "\n")
 
-data = join(data, newData, on=:Name)
+data = innerjoin(data, newData, on=:Name, matchmissing=:equal)
 println(data, "\n")
 
 select!(data,[:Name,:Job])

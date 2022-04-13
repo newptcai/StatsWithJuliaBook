@@ -1,12 +1,12 @@
 using DataFrames, CSV
-data1 = CSV.read("../data/purchaseData.csv", copycols=true)
+data1 = CSV.read("data/purchaseData.csv", DataFrame)
 println("Original value: ", data1.Name[1],"\n")
 
 data2 = data1
 data2.Name[1] = "EMILY"
 @show data1.Name[1]
 
-data1 = CSV.read("../data/purchaseData.csv", copycols=true)
+data1 = CSV.read("data/purchaseData.csv", DataFrame)
 data2 = copy(data1)
 data2.Name[1] = "EMILY"
 @show data1.Name[1]

@@ -1,7 +1,9 @@
 using DataFrames, CSV
-data1 = CSV.read("../data/purchaseData.csv")
-data2 = CSV.read("../data/purchaseData.csv", copycols=true)
+data1 = CSV.read("data/purchaseData.csv", DataFrame)
+data2 = CSV.read("data/purchaseData.csv", DataFrame, copycols=true)
 
+# The following line is obsolete. 
+# Now you don't need to `copycols=true` anymore.
 try data1[1, :Name] = "YARDEN" catch; @warn "Cannot: data1 is immutable" end 
 
 data2[1, :Name] = "YARDEN"

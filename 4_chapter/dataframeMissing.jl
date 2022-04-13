@@ -1,5 +1,5 @@
 using Statistics, DataFrames, CSV
-data = CSV.read("../data/purchaseData.csv", copycols=true)
+data = CSV.read("data/purchaseData.csv", DataFrame)
 
 println(mean(data.Price),"\n")
 println(mean(skipmissing(data.Price)),"\n")
