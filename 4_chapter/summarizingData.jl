@@ -1,5 +1,5 @@
 using CSV, Statistics, StatsBase
-data = CSV.read("../data/temperatures.csv")[:,4]
+data = CSV.read("data/temperatures.csv", DataFrame)[:,4]
 
 println("Sample Mean: ", mean(data))
 println("Harmonic <= Geometric <= Arithmetic ", 

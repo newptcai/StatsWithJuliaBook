@@ -1,6 +1,6 @@
 using DataFrames, CSV, Statistics
 
-data = CSV.read("../data/temperatures.csv", copycols=true)
+data = CSV.read("data/temperatures.csv", DataFrame)
 brisT = data.Brisbane
 gcT = data.GoldCoast
 
@@ -12,7 +12,7 @@ meanVect = [mean(brisT) , mean(gcT)]
 covMat = [sigB^2  covBG
           covBG   sigG^2]
 
-outfile = open("../data/mvParams.jl","w")
+outfile = open("data/mvParams.jl","w")
 write(outfile,"meanVect = $meanVect \ncovMat = $covMat")
 close(outfile)
-print(read("../data/mvParams.jl", String))
+print(read("data/mvParams.jl", String))

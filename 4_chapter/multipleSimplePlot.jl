@@ -1,6 +1,6 @@
 using DataFrames, CSV, Statistics, Dates, Plots, Measures; pyplot()
 
-data = CSV.read("../data/temperatures.csv")
+data = CSV.read("data/temperatures.csv", DataFrame)
 brisbane = data.Brisbane
 goldcoast = data.GoldCoast
 
