@@ -1,6 +1,6 @@
 using SpecialFunctions, Distributions
 
-a,b = 0.2, 0.7
+a,b = 2, 7
 x = 0.75
 
 betaAB1 = beta(a,b)
