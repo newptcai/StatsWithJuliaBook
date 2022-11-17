@@ -1,9 +1,9 @@
 using Statistics, StatsBase, LinearAlgebra, DataFrames, CSV
-df = CSV.read("../data/3featureData.csv",header=false)
+df = CSV.read("../data/3featureData.csv", DataFrame, header=false)
 n, p = size(df)
 println("Number of features: ", p)
 println("Number of observations: ", n)
-X = convert(Array{Float64,2},df)
+X = Matrix{Float64}(df)
 println("Dimensions of data matrix: ", size(X))
 
 xbarA = (1/n)*X'*ones(n)
