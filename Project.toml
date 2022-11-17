@@ -42,3 +42,6 @@ TimeSeries = "9e3dc215-6440-5c97-bce1-76c03772f85e"
 
 [extras]
 CPUSummary = "2a0fbf3d-bb9c-48f3-b0a9-814d99fd7ab9"
+
+[compat]
+julia = "1.8"
